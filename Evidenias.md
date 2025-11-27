@@ -12,6 +12,10 @@ Proceso a crear y cambiar de rama para el manejo de ramas y version sin tocar la
 Agrego los cambios localmente
 ![alt text](image-1.png)
 
+## Git commit -m ""
+Demostracion del uso del git commit -m "" es decir con un comentario para guardar los cambios y dejarlos listos para el push a la rama designada
+![alt text](image-7.png)
+
 ## Git status
 Reviso el estado del git para saber si todos los archivos han sido guardados
 ![alt text](image-3.png)
