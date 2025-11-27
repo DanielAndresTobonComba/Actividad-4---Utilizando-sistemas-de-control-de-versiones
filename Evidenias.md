@@ -4,20 +4,30 @@
 
 
 ## Git branch - Git checkout
+Proceso a crear y cambiar de rama para el manejo de ramas y version sin tocar la main/master
 ![alt text](image.png)
 ![alt text](image-2.png)
 
 ## Git add .
+Agrego los cambios localmente
 ![alt text](image-1.png)
 
+## Git commit -m ""
+Demostracion del uso del git commit -m "" es decir con un comentario para guardar los cambios y dejarlos listos para el push a la rama designada
+![alt text](image-7.png)
+
 ## Git status
+Reviso el estado del git para saber si todos los archivos han sido guardados
 ![alt text](image-3.png)
 
 ## Git log
+Reviso el historial de logs
 ![alt text](image-4.png)
 
 ## Git status 
+Veo otra vez el estado de mi arbol y esta limpio 
 ![alt text](image-5.png)
 
 ## Git push
+Realizo de push de mi rama a mi rama ara crear un pull request sobre ""mi-rama" y no la main/master
 ![alt text](image-6.png)
