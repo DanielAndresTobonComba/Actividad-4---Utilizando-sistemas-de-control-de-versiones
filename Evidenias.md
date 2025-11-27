@@ -18,3 +18,6 @@
 
 ## Git status 
 ![alt text](image-5.png)
+
+## Git push
+![alt text](image-6.png)
