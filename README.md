@@ -1,88 +1,142 @@
-# Actividad-4-Utilizando-sistemas-de-control-de-versiones
+# Actividad 4 – Utilizando sistemas de control de versiones
 
-# Casos de uso 
+## Casos de Uso
 
+---
 
-# CU01 – Inicio y Cierre de Sesión
+## CU01 – Inicio y Cierre de Sesión
 
-## 🧑 Actor
+### Actor  
 Usuario registrado
 
-## 📝 Descripción
+### Descripción  
 El usuario ingresa su correo y contraseña.  
 Si las credenciales coinciden con las almacenadas en `localStorage`, se inicia una sesión y se redirige al dashboard.  
 El cierre de sesión limpia los datos almacenados de sesión y devuelve al usuario a la página de login.
 
-## ⚙️ Precondición
+### Precondición  
 El usuario debe estar registrado en el sistema.
 
-## 📌 Postcondición
+### Postcondición  
 Se genera o elimina una sesión activa.
 
-## 🔄 Flujo Principal
-1. El usuario accede a `login.html`.
-2. Ingresa email y contraseña.
-3. Se validan los datos usando `localStorage`.
-4. Si son válidos → redirección a `dashboard.html`.
-5. Para cerrar sesión, el usuario presiona "Cerrar sesión" → se elimina la sesión.
+### Flujo Principal  
+1. El usuario accede a `login.html`.  
+2. Ingresa email y contraseña.  
+3. Se validan los datos usando `localStorage`.  
+4. Si son válidos → redirección a `dashboard.html`.  
+5. Al cerrar sesión se eliminan los datos de la sesión activa.
 
-## 🧪 Criterios de Aceptación
-- No avanzar al dashboard si los datos son incorrectos.
-- Mantener la sesión mientras el usuario no cierre sesión.
-- Mensaje de error si las credenciales son inválidas.
+### Criterios de Aceptación  
+- No avanzar al dashboard si los datos son incorrectos.  
+- Mantener la sesión mientras el usuario no la cierre.  
+- Mostrar mensaje de error si las credenciales son inválidas.
 
+---
 
+## CU02 – Creación de Tarjetas de Tareas
 
-# CU02 – Creación de Tarjetas de Tareas
-
-## 🧑 Actor
+### Actor  
 Usuario autenticado
 
-## 📝 Descripción
-El usuario puede crear una tarjeta ingresando **título, descripción, fecha límite y estado** (por hacer, en progreso, completada).  
+### Descripción  
+El usuario puede crear una tarjeta ingresando título, descripción, fecha límite y estado (por hacer, en progreso o completada).  
 Los datos se almacenan en `localStorage` y se muestran visualmente en el dashboard.
 
-## ⚙️ Precondición
+### Precondición  
 El usuario debe haber iniciado sesión.
 
-## 📌 Postcondición
+### Postcondición  
 Se crea una tarjeta visible en la interfaz.
 
-## 🔄 Flujo Principal
-1. Usuario hace clic en “Nueva tarea”.
-2. Se abre un formulario de creación.
-3. Ingresa los datos requeridos.
+### Flujo Principal  
+1. El usuario hace clic en “Nueva tarea”.  
+2. Se abre un formulario de creación.  
+3. Ingresa los datos requeridos.  
 4. La tarjeta se guarda y se muestra en el dashboard.
 
-## 🧪 Criterios de Aceptación
-- Ningún campo obligatorio debe quedar vacío.
-- La tarjeta debe aparecer inmediatamente después de crearse.
+### Criterios de Aceptación  
+- Ningún campo obligatorio debe quedar vacío.  
+- La tarjeta debe aparecer inmediatamente luego de crearse.  
 - Los datos deben persistir en `localStorage`.
 
+---
 
-# CU03 – Edición de Tareas
+## CU03 – Edición de Tareas
 
-## 🧑 Actor
+### Actor  
 Usuario autenticado
 
-## 📝 Descripción
+### Descripción  
 El usuario puede modificar una tarjeta existente: título, descripción, fecha o estado.  
-Los cambios se guardan en `localStorage` y se actualizan visualmente.
+Los cambios se guardan en `localStorage` y se actualizan visualmente en la interfaz.
 
-## ⚙️ Precondición
-La tarea debe existir.
+### Precondición  
+La tarea debe existir previamente.
 
-## 📌 Postcondición
-La tarjeta se actualiza y se refleja en pantalla.
+### Postcondición  
+La tarjeta se actualiza y se refleja en la interfaz.
 
-## 🔄 Flujo Principal
-1. Usuario selecciona una tarjeta.
-2. Hace clic en “Editar”.
-3. Modifica los datos.
-4. Guarda y se actualiza la tarjeta.
+### Flujo Principal  
+1. El usuario selecciona una tarjeta existente.  
+2. Hace clic en “Editar”.  
+3. Modifica los datos.  
+4. Guarda los cambios y se actualiza la tarjeta.
 
-## 🧪 Criterios de Aceptación
-- Los cambios deben quedar guardados.
-- La vista debe actualizarse automáticamente.
-- No se puede dejar una tarjeta sin título.
+### Criterios de Aceptación  
+- Los cambios deben guardarse correctamente.  
+- La vista debe actualizarse automáticamente.  
+- No se permite guardar una tarjeta sin título.
 
+---
+
+## CU04 – Eliminación de Tareas
+
+### Actor  
+Usuario autenticado
+
+### Descripción  
+Permite eliminar una tarjeta de tarea de forma permanente.  
+La lista de tareas debe actualizarse y los datos deben eliminarse de `localStorage`.
+
+### Precondición  
+La tarjeta debe existir.
+
+### Postcondición  
+La tarjeta se elimina del sistema y desaparece de la interfaz.
+
+### Flujo Principal  
+1. Usuario selecciona una tarjeta.  
+2. Presiona “Eliminar”.  
+3. Se solicita confirmación.  
+4. La tarea se elimina definitivamente.
+
+### Criterios de Aceptación  
+- La eliminación debe ser irreversible.  
+- Debe pedirse confirmación antes de borrar.  
+- No deben quedar datos residuales en `localStorage`.
+
+---
+
+## CU05 – Interfaz Responsiva y Amigable
+
+### Actor  
+Usuario (web o móvil)
+
+### Descripción  
+El sistema debe adaptarse a distintos tamaños de pantalla (PC, tablet o móvil) utilizando CSS (Flexbox, Grid y media queries).  
+La experiencia debe ser intuitiva, ordenada y fácil de usar.
+
+### Precondición  
+El usuario debe acceder desde un navegador.
+
+### Postcondición  
+La interfaz se adapta correctamente al dispositivo utilizado.
+
+### Criterios de Aceptación  
+- Menú adaptable para pantallas pequeñas.  
+- Formularios y botones accesibles en dispositivos móviles.  
+- Tarjetas organizadas automáticamente según el ancho disponible.  
+- Tipografía legible en todos los dispositivos.
+
+---
