@@ -1,0 +1,19 @@
+# Sistema operativo
+.DS_Store
+
+# Dependencias (si usas npm)
+node_modules/
+
+# Archivos sensibles
+.env
+config.js
+
+# Logs
+*.log
+
+# Compilados
+dist/
+build/
+
+# Archivos temporales
+*.tmp
