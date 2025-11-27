@@ -15,3 +15,6 @@
 
 ## Git log
 ![alt text](image-4.png)
+
+## Git status 
+![alt text](image-5.png)
